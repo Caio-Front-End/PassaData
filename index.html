@@ -21,6 +21,34 @@
     </div>
   </header>
   <main>
+    <div id="teams-container">
+      <!-- Seção de clube exemplo -->
+      <section class="team-section">
+        <div class="team-header">
+          <img src="./assets/emblemas/logo-america-mineiro-4096.png" alt="Emblema America" class="team-emblem" />
+          <h2 class="team-title">America</h2>
+        </div>
+        <div class="team-cards">
+          <!-- Card de jogadora para teste -->
+          <div class="player-card">
+            <button class="favorite-btn" aria-label="Favoritar atleta">
+              <!-- SVG estrela -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </button>
+            <img src="https://sismf.museudofutebol.org/anexos/imagem/614669/w:640/h:640/c:0" alt="Foto Jogadora" class="player-photo" />
+            <div class="player-info">
+              <h3 class="player-name">Formiga</h3>
+              <p class="player-position">Atacante</p>
+              <p class="player-stats">
+                Gols: <span>10</span> | Assistências: <span>5</span> | Jogos: <span>12</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <div id="modal-form-container">
       <!-- formulário de criação -->
       <form id="player-form">
@@ -104,8 +132,6 @@
           <button type="button" id="delete-player-btn">Excluir</button>
         </div>
       </form>
-    </div>
-    <div id="teams-container">
     </div>
     <!-- modais de aviso -->
     <div id="modal-success-add" class="modal-success">
