@@ -1,0 +1,60 @@
+@import url('./components/_forms.css');
+@import url('./components/_cards.css');
+@import url('./components/_modals.css');
+@import url('./components/_sections.css');
+
+/* Estilos do cabeçalho */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+
+.logo,
+.site-name {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 12px;
+}
+
+.site-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.add-player-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #9B2A8C;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.add-player-btn:hover {
+  background-color: #A84F9C;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .site-name {
+    display: none;
+  }
+
+  .logo img {
+    height: 32px;
+    margin-right: 0;
+  }
+}
