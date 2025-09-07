@@ -1,0 +1,42 @@
+/* Estilo para a seção do clube */
+.team-section {
+  margin: 32px 0;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Cabeçalho da seção */
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.team-emblem {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.team-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Cards dentro da seção */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+}
