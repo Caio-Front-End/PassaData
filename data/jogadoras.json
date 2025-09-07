@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "nome": "Andressa Alves",
     "posicao": "Meio-campo",
     "clube": "Corinthians",
@@ -11,7 +11,7 @@
     "favorita": false
   },
   {
-    "id": "2",
+    "id": 2,
     "nome": "Dayana Rodríguez",
     "posicao": "Meio-campo",
     "clube": "Corinthians",
@@ -22,7 +22,7 @@
     "favorita": false
   },
   {
-    "id": "3",
+    "id": 3,
     "nome": "Mariza",
     "posicao": "Zagueira",
     "clube": "Corinthians",
@@ -33,7 +33,7 @@
     "favorita": false
   },
   {
-    "id": "4",
+    "id": 4,
     "nome": "Thaís Regina",
     "posicao": "Zagueira",
     "clube": "Corinthians",
@@ -44,7 +44,7 @@
     "favorita": false
   },
   {
-    "id": "5",
+    "id": 5,
     "nome": "Letícia Teles",
     "posicao": "Zagueira",
     "clube": "Corinthians",
