@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PassaData</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./assets/logo/logo_passa_a_bola.png" alt="Logo PassaData" />
+        <h1 class="site-name">PassaData</h1>
+      </div>
+      <button class="add-player-btn">Adicionar jogadora</button>
+    </div>
+  </header>
+  <main>
+    <div id="modal-form-container">
+      <!-- formulário de criação -->
+      <form id="player-form">
+        <button type="button" id="close-modal-btn" aria-label="Fechar">&times;</button>
+        <div class="form-group">
+          <label for="player-name">Nome:</label>
+          <input type="text" id="player-name" name="player-name" required>
+        </div>
+        <div class="form-group">
+          <label for="player-position">Posição:</label>
+          <input type="text" id="player-position" name="player-position" required>
+        </div>
+        <div class="form-group">
+          <label for="player-photo">Link foto:</label>
+          <input type="text" id="player-photo" name="player-photo" required>
+        </div>
+        <div class="form-group">
+          <label for="player-team">Time:</label>
+          <select id="player-team" name="player-team" required>
+            <option value="">Selecione</option>
+            <option value="America">America</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Corinthians">Corinthians</option>
+            <option value="Cruzeiro">Cruzeiro</option>
+            <option value="Ferroviaria">Ferroviaria</option>
+            <option value="Flamengo">Flamengo</option>
+            <option value="Fluminense">Fluminense</option>
+            <option value="Gremio">Gremio</option>
+            <option value="Internacional">Internacional</option>
+            <option value="Juventude">Juventude</option>
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Sao Paulo">Sao Paulo</option>
+            <option value="Sport">Sport</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="player-goals">Gols:</label>
+          <input type="number" id="player-goals" name="player-goals" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="player-assists">Assistências:</label>
+          <input type="number" id="player-assists" name="player-assists" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="player-games">Jogos:</label>
+          <input type="number" id="player-games" name="player-games" min="0" required>
+        </div>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+    <!-- formulário de edição -->
+    <div id="modal-edit-form-container">
+      <form id="edit-player-form">
+        <button type="button" id="close-edit-modal-btn" aria-label="Fechar">&times;</button>
+        <div class="form-group">
+          <label for="edit-player-name">Nome:</label>
+          <input type="text" id="edit-player-name" name="edit-player-name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-player-position">Posição:</label>
+          <input type="text" id="edit-player-position" name="edit-player-position" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-player-photo">Link foto:</label>
+          <input type="text" id="edit-player-photo" name="edit-player-photo" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-player-goals">Gols:</label>
+          <input type="number" id="edit-player-goals" name="edit-player-goals" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-player-assists">Assistências:</label>
+          <input type="number" id="edit-player-assists" name="edit-player-assists" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-player-games">Jogos:</label>
+          <input type="number" id="edit-player-games" name="edit-player-games" min="0" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="save-edit-btn">Salvar</button>
+          <button type="button" id="delete-player-btn">Excluir</button>
+        </div>
+      </form>
+    </div>
+    <div id="teams-container">
+    </div>
+  </main>
+  <footer></footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
