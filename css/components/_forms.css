@@ -1,0 +1,167 @@
+/* Modal containers */
+#modal-form-container,
+#modal-edit-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none;
+}
+
+/* Form modals */
+#player-form,
+#edit-player-form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Labels */
+#player-form label,
+#edit-player-form label {
+  font-weight: 500;
+  color: #222;
+}
+
+/* Inputs & Selects */
+#player-form input,
+#player-form select,
+#edit-player-form input,
+#edit-player-form select {
+  padding: 0.6rem 0.8rem;
+  border: none;
+  border-bottom: 3.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border-color .7s;
+}
+
+#player-form input:focus,
+#player-form select:focus,
+#edit-player-form input:focus,
+#edit-player-form select:focus {
+  border-color: #9B2A8C;
+  outline: none;
+}
+
+/* Submit & Action buttons */
+#player-form button[type="submit"],
+#save-edit-btn {
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.2rem;
+  background: #9B2A8C;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#player-form button[type="submit"]:hover,
+#save-edit-btn:hover {
+  background: #A84F9C;
+}
+
+#delete-player-btn {
+  padding: 0.1rem 1.2rem;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#delete-player-btn:hover {
+  background: #b71c1c;
+}
+
+/* Botão de fechar dos modais */
+#close-modal-btn,
+#close-edit-modal-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #fff;
+  border: none;
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  transition: all .5s ease;
+  border-top-right-radius: 12px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-modal-btn:hover,
+#close-edit-modal-btn:hover {
+  background: red;
+  color: #fff;
+}
+
+/* Botões de ação do formulário de edição */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  #modal-form-container,
+  #modal-edit-form-container {
+    padding: 1rem;
+  }
+
+  #player-form,
+  #edit-player-form {
+    min-width: unset;
+    max-width: 90vw;
+    padding: 1.2rem 0.8rem;
+    font-size: 0.98rem;
+  }
+
+  .form-group label,
+  #player-form input,
+  #player-form select,
+  #edit-player-form input,
+  #edit-player-form select {
+    font-size: 1rem;
+  }
+
+  #player-form button[type="submit"],
+  #save-edit-btn,
+  #delete-player-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}
