@@ -1,0 +1,89 @@
+.player-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  gap: 0;
+  transition: box-shadow 0.2s;
+  overflow: hidden; 
+  cursor: pointer;
+  position: relative;
+}
+
+.player-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.player-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  display: block;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  align-items: center;
+}
+
+.player-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.player-position {
+  font-size: 1rem;
+  color: #555;
+}
+
+.player-stats {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Botão de favoritar */
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn:hover svg {
+  stroke: #FFC107;
+  filter: drop-shadow(0 0 4px #FFD700);
+}
+
+.favorite-btn svg {
+  pointer-events: none;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+  .player-photo {
+    height: 100px;
+    border-radius: 12px 12px 0 0;
+  }
+  .player-info {
+    padding: 12px;
+    gap: 6px;
+  }
+}
