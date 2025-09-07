@@ -1,0 +1,46 @@
+/* Modal container */
+.modal-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  display: none;
+}
+
+/* Modal content */
+.modal-content {
+  background: #4CC27D;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+/* Modal message */
+.modal-content p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  .modal-success {
+    top: 10px;
+    width: 98%;
+    max-width: 98%;
+  }
+  .modal-content {
+    padding: 18px 8px 12px 8px;
+    font-size: 1rem;
+  }
+  .close-success-btn {
+    font-size: 1.3rem;
+    top: 6px;
+    right: 8px;
+  }
+}
