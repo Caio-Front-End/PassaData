@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PassaData</title>
   <link rel="shortcut icon" href="./assets/logo/logo_passa_a_bola.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -23,9 +28,7 @@
   <main>
     <div id="teams-container">
     </div>
-    <!-- formulário de adição -->
     <div id="modal-form-container">
-      <!-- formulário de criação -->
       <form id="player-form">
         <button type="button" id="close-modal-btn" aria-label="Fechar">&times;</button>
         <div class="form-group">
@@ -46,7 +49,7 @@
             <option value="">Selecione</option>
             <option value="America">America</option>
             <option value="Bahia">Bahia</option>
-            <option value="Bahia">Bragantino</option>
+            <option value="Bragantino">Bragantino</option>
             <option value="Corinthians">Corinthians</option>
             <option value="Cruzeiro">Cruzeiro</option>
             <option value="Ferroviaria">Ferroviaria</option>
@@ -75,7 +78,6 @@
         <button type="submit">Salvar</button>
       </form>
     </div>
-    <!-- formulário de edição -->
     <div id="modal-edit-form-container">
       <form id="edit-player-form">
         <button type="button" id="close-edit-modal-btn" aria-label="Fechar">&times;</button>
@@ -88,12 +90,12 @@
           <input type="text" id="edit-player-position" name="edit-player-position" required>
         </div>
         <div class="form-group">
-          <label for="player-team">Time:</label>
-          <select id="player-team" name="player-team" required>
+          <label for="edit-player-team">Time:</label>
+          <select id="edit-player-team" name="edit-player-team" required>
             <option value="">Selecione</option>
             <option value="America">America</option>
             <option value="Bahia">Bahia</option>
-            <option value="Bahia">Bragantino</option>
+            <option value="Bragantino">Bragantino</option>
             <option value="Corinthians">Corinthians</option>
             <option value="Cruzeiro">Cruzeiro</option>
             <option value="Ferroviaria">Ferroviaria</option>
@@ -129,16 +131,13 @@
         </div>
       </form>
     </div>
-    <!-- modais de aviso -->
     <div id="modal-success-add" class="modal-success">
       <div class="modal-content">
         <p>Jogadora adicionada com sucesso !</p>
       </div>
     </div>
-    <div id="modal-success-edit" class="modal-success">
-      <div class="modal-content">
-        <p>Jogadora editada com sucesso !</p>
-      </div>
+    <div id="modal-success-edit" com sucesso !</p>
+    </div>
     </div>
     <div id="modal-success-remove" class="modal-success">
       <div class="modal-content">
