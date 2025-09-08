@@ -91,6 +91,13 @@ function cardClickEvent() {
   //Adicionando funcionalidade de edição do card:
   const saveButton = editForm.querySelector('#save-edit-btn');
 
+  //Botão fechar form edit
+  const closeEditFormBtn = document.querySelector('#close-edit-modal-btn');
+
+  closeEditFormBtn.addEventListener('click', () => {
+    editForm.style.display = 'none';
+  });
+
   saveButton.addEventListener('click', async (e) => {
     e.preventDefault();
 
