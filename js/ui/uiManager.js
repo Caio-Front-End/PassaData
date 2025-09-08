@@ -3,7 +3,6 @@ const teamsContainer = document.querySelector('#teams-container');
 
 //Função receberá um array de jogadoras (JSON / localStorage -> playerServices.js)
 //Renderiza os cards, agrupados por seções (times):
-
 export function renderPlayersByTeam(playersArray) {
   //Limpa o container para evitar repetição durante as atualizações:
   teamsContainer.innerHTML = '';
@@ -44,7 +43,7 @@ export function renderPlayersByTeam(playersArray) {
 //Renderizando cards:
 function createPlayerCard(player) {
   return `
-    <div class="player-card">
+    <div class="player-card" data-id="${player.id}">
             <button class="favorite-btn" aria-label="Favoritar atleta">
               <!-- SVG estrela -->
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
