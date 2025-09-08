@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', startApp);
 //
 
 //Eventos de captura de click para os cards:
-
 function cardClickEvent() {
   const teamsContainer = document.querySelector('#teams-container');
   const editForm = document.querySelector('#modal-edit-form-container');
@@ -137,65 +136,68 @@ function cardClickEvent() {
     renderPlayersByTeam(updatedPlayers);
   });
 
-  //Funcionalidade de adicionar jogadora:
+  function addPlayerSteps() {
+    //Funcionalidade de adicionar jogadora:
 
-  //Elementos de manipulação para adição:
-  const openAddFormBtn = document.querySelector('.add-player-btn');
-  const addFormContainer = document.querySelector('#modal-form-container');
-  const addForm = document.querySelector('#player-form');
-  const closeAddFormButton = document.querySelector('#close-modal-btn');
-  const successAddModal = document.querySelector('#modal-success-add');
+    //Elementos de manipulação para adição:
+    const openAddFormBtn = document.querySelector('.add-player-btn');
+    const addFormContainer = document.querySelector('#modal-form-container');
+    const addForm = document.querySelector('#player-form');
+    const closeAddFormButton = document.querySelector('#close-modal-btn');
+    const successAddModal = document.querySelector('#modal-success-add');
 
-  //Função para atualizar a lista de jogadoras:
-  async function refreshPlayerList() {
-    const players = await getPLayers();
-    renderPlayersByTeam(players);
+    //Função para atualizar a lista de jogadoras:
+    async function refreshPlayerList() {
+      const players = await getPLayers();
+      renderPlayersByTeam(players);
+    }
+
+    //Eventos para adicionar jogadora
+
+    //Abrir form:
+    openAddFormBtn.addEventListener('click', () => {
+      addForm.reset();
+      addFormContainer.style.display = 'flex';
+    });
+
+    //Botão fechar form:
+    closeAddFormButton.addEventListener('click', () => {
+      addFormContainer.style.display = 'none';
+    });
+
+    //Enviar form (criar nova jogadora)
+    addForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      //Coleta os dados para o novo objeto(jogadora)
+      const newPlayerData = {
+        id: Date.now(), // Cria um ID para a nova jogadora
+        nome: document.querySelector('#player-name').value,
+        posicao: document.querySelector('#player-position').value,
+        foto: document.querySelector('#player-photo').value,
+        clube: document.querySelector('#player-team').value,
+        gols: parseInt(document.querySelector('#player-goals').value),
+        assistencias: parseInt(document.querySelector('#player-assists').value),
+        jogos: parseInt(document.querySelector('#player-games').value),
+      };
+
+      //Salva nova jogadora no localStorage
+      addPlayer(newPlayerData);
+
+      //Esconde o formulário novamente:
+      addFormContainer.style.display = 'none';
+
+      //Exibe modal de "jogadora adicionada com sucesso"
+      successAddModal.style.display = 'flex';
+      setTimeout(() => {
+        successAddModal.style.display = 'none';
+      }, 3000);
+
+      //Atualiza lista de cards:
+      refreshPlayerList();
+    });
   }
-
-  //Eventos para adicionar jogadora
-
-  //Abrir form:
-  openAddFormBtn.addEventListener('click', () => {
-    addForm.reset();
-    addFormContainer.style.display = 'flex';
-  });
-
-  //Botão fechar form:
-  closeAddFormButton.addEventListener('click', () => {
-    addFormContainer.style.display = 'none';
-  });
-
-  //Enviar form (criar nova jogadora)
-  addForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    //Coleta os dados para o novo objeto(jogadora)
-    const newPlayerData = {
-      id: Date.now(), // Cria um ID para a nova jogadora
-      nome: document.querySelector('#player-name').value,
-      posicao: document.querySelector('#player-position').value,
-      foto: document.querySelector('#player-photo').value,
-      clube: document.querySelector('#player-team').value,
-      gols: parseInt(document.querySelector('#player-goals').value),
-      assistencias: parseInt(document.querySelector('#player-assists').value),
-      jogos: parseInt(document.querySelector('#player-games').value),
-    };
-
-    //Salva nova jogadora no localStorage
-    addPlayer(newPlayerData);
-
-    //Esconde o formulário novamente:
-    addFormContainer.style.display = 'none';
-
-    //Exibe modal de "jogadora adicionada com sucesso"
-    successAddModal.style.display = 'flex';
-    setTimeout(() => {
-      successAddModal.style.display = 'none';
-    }, 3000);
-
-    //Atualiza lista de cards:
-    refreshPlayerList();
-  });
+  addPlayerSteps();
 }
 
 cardClickEvent();
