@@ -58,3 +58,10 @@ export function updatePlayer(updatedPlayer) {
 
   localStorage.setItem(localStorageKey, JSON.stringify(updatedPlayers));
 }
+
+//Adiciona nova jogadora:
+export function addPlayer(newPlayer) {
+  const players = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+  players.push(newPlayer);
+  localStorage.setItem(localStorageKey, JSON.stringify(players));
+}
