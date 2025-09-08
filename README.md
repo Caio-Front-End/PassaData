@@ -102,7 +102,7 @@ Sinta-se livre para abrir issues, enviar sugestões ou pull requests!
 
 ## 👨‍💻 Desenvolvedores
 
-| Nome                           | RM                |
-| ------------------------------ | ----------------- |
-| Caio Nascimento Battista       | 561383            |
-| Manoah Leão                    | 563713            |
+| Nome                           | RM                | Linkedin                                                            |
+| ------------------------------ | ----------------- | ------------------------------------------------------------------- |  
+| Caio Nascimento Battista       | 561383            | [LinkedIn](https://www.linkedin.com/in/cnbtt/)                      |
+| Manoah Leão                    | 563713            | [LinkedIn](https://www.linkedin.com/in/manoah-le%C3%A3o-735a83346/) |
