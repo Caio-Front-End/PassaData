@@ -18,7 +18,7 @@
 
 ## Acesso
 
-[Vercel App](https://passa-data.vercel.app/)]
+[Vercel App](https://passa-data.vercel.app/)
 
 ---
 
