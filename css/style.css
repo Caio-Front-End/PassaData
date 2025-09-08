@@ -3,6 +3,73 @@
 @import url('./components/_modals.css');
 @import url('./components/_sections.css');
 
+/* Variáveis de tipografia */
+:root {
+  --font-principal: 'Oswald', sans-serif; 
+  --font-secundaria: 'Roboto', sans-serif;
+}
+
+/* Aplicação geral */
+body {
+  font-family: var(--font-secundaria);
+  font-weight: 400; 
+  color: #333; 
+}
+
+/* Títulos principais */
+h1, h2, h3 {
+  font-family: var(--font-principal);
+  font-weight: 700; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Personalizando elementos específicos do HTML */
+
+/* Header */
+.site-name {
+  font-family: var(--font-principal);
+  font-size: 2rem; /* Exemplo de tamanho */
+}
+
+.add-player-btn {
+  font-family: var(--font-secundaria);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Container dos times */
+#teams-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Formulários */
+.form-group label {
+  font-family: var(--font-secundaria);
+  font-weight: 700;
+  display: block;
+}
+
+form input, form select, form button {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    font-family: var(--font-principal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Modais de aviso */
+.modal-content p {
+    font-family: var(--font-secundaria);
+    font-size: 1.1rem;
+}
+
 /* Estilos do cabeçalho */
 
 .header-container {
